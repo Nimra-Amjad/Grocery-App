@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shared_preferences_and_bloc/features/cart/bloc/cart_bloc.dart';
 import 'package:shared_preferences_and_bloc/features/home/bloc/home_bloc.dart';
 import 'package:shared_preferences_and_bloc/features/home/ui/home.dart';
 
@@ -17,6 +18,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider<HomeBloc>(
           create: (context) => HomeBloc(),
+        ),
+        BlocProvider<CartBloc>(
+          create: (context) => CartBloc(),
         ),
       ],
       child: MaterialApp(
